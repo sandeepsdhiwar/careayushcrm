@@ -27,7 +27,7 @@ if(Session::get('role_name')!="offe")
     
     @include('offe.common.sidenavigation')
 
-    <div id="wrapper">
+    <div id="wrapper"> 
         <div class="content-wrapper container">
             <div class="row">
                 <div class="col-sm-12">
