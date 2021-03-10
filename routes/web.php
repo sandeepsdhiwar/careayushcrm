@@ -211,7 +211,10 @@ Route::get('/ccehealth-worker-detail', function () {
     return view('cce.healthWorker_detail');
 });
 Route::get('/branch-helthworkeroffe-detail', function () {
-    return view('offe.helthworker.helthworker_details');
+    return view('offe.helthworker.helthworker_details');//offe helthworker details
+});
+Route::get('/branch-customeroffe-detail', function () {
+    return view('offe.customer.customer_detail');//offe customer details
 });
 
 /*************Customer Detail */
