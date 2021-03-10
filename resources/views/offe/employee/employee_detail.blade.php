@@ -64,7 +64,7 @@ if(Session::get('role_name')!="offe")
                                             <th>Contact Email</th>
                                             <th>Address</th>
                                             <th>Blood Group</th>
-                                            <th>Logins</th>
+                                            {{-- <th>Logins</th> --}}
                                             <th>isActive</th>
                                             <th>Action</th>
                                         </tr>
@@ -93,7 +93,7 @@ if(Session::get('role_name')!="offe")
                                                             Email: <b>{{$alled->emp_email}}</b></td>
                                                             <td>{{$alled->emp_address}}</td>
                                                             <td>{{$alled->blood_group}}</td>
-                                                            <td>
+                                                            {{-- <td>
                                                                 <?php
                                                                 $ld=App\Logindetail::where('emp_id',$alled->id)->first();
                                                                 ?>
@@ -105,7 +105,7 @@ if(Session::get('role_name')!="offe")
                                                                 No Login Access<br><br>
                                                                 <button class="btn btn-success btn-sm" title="Create New Academic Year" onclick="getManCreateFormLogin({{$alled->id}})"><i class="fa fa-plus"></i></button>
                                                                 @endif
-                                                            </td>
+                                                            </td> --}}
                                                             <td>{{$alled->is_active}}</td>
                                                             <td><button class="btn btn-info btn-sm" onclick="getEditFormBranchEmployee({{$alled->id}})"><i class="fa fa-pencil"></i></button>
                                                                 <button class="btn btn-danger btn-sm" onclick="getDeleteBranchEmployee({{$alled->id}})"><i class="fa fa-trash"></i></button>    

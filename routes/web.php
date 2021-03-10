@@ -210,6 +210,9 @@ Route::get('/jqajax/getCreateFormHealthWorker', function () {
 Route::get('/ccehealth-worker-detail', function () {
     return view('cce.healthWorker_detail');
 });
+Route::get('/branch-helthworkeroffe-detail', function () {
+    return view('offe.helthworker.helthworker_details');
+});
 
 /*************Customer Detail */
 Route::get('/customer-detail', function () {
