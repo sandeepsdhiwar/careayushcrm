@@ -37,17 +37,22 @@ if(!Session::get('role_name')=="offe")
                     </div>
                 </div>
             </div><!-- end .page title-->
+            <?php 
+            $customercount=App\CustomerDetail::where('branch_id',Session::get('branch_id'))->count();//->get();
+            $bookingscount=App\PatientDetail::count();
+            $helthworkercount=App\HealthWorker::count();
+            
+            ?>
             <div class="row">
                 <div class="col-lg-3">
                     <div class="widget-box clearfix height-auto">
                         <div class="pull text-left clearfix">
-                            <h4>Total Patient</h4>
+                            <h4>Total Customer:-&nbsp;&nbsp;&nbsp;{{$customercount}}</h4>
 
                             <h2 class="pull-left">
                                 <img src="https://img.icons8.com/ios/40/000000/patient-oxygen-mask.png"></h2>
+                                {{-- &nbsp;<h2>{{$count}}</h2> --}}
                             <h2 class="pull-right">
-                               
-                            </h2>
                         </div>
                         <br>
                         <div class="progress progress-sm">
@@ -59,9 +64,10 @@ if(!Session::get('role_name')=="offe")
                     <div class="widget-box clearfix height-auto">
                         <div class="pull text-left clearfix">
 
-                            <h4>New Leads</h4>
+                            <h4>Total Helthworkers &nbsp;&nbsp;&nbsp;&nbsp;{{$helthworkercount}}</h4>
+
                             <h2 class="pull-left">
-                                <img src="https://img.icons8.com/dotty/40/000000/ticket.png"></h2>
+                                <img src="https://img.icons8.com/emoji/48/000000/man-office-worker.png" style="width: 40px;"/>
                             <h2 class="pull-right">
                                 
                             </h2>
@@ -76,12 +82,7 @@ if(!Session::get('role_name')=="offe")
                 <div class="col-md-3">
                     <div class="widget-box clearfix height-auto">
                         <div class="pull text-left clearfix">
-                            <h4>Today Attendance</h4>
-                            <h2 class="pull-left">
-                                <img src="https://img.icons8.com/dotty/40/000000/attendance-mark.png"/>
-                            <h2 class="pull-right">
-                                
-                            </h2>
+                           
                         </div><br>
                         <div class="progress progress-sm">
 

@@ -168,6 +168,7 @@
 .sidebar-collapse
 {
 	background:#fff;
+  height: 600px;
 }
 #side-menu li.active a,
 #side-menu li:hover a {
