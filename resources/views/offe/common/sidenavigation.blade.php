@@ -31,6 +31,12 @@ if(Session::get('role_name')!="offe")
                         <li><a href="/branch-customeroffe-detail"> Customer Detail</a></li>
                     </ul>
                 </li>
+                <li>
+                    <a href="#"><img src="https://img.icons8.com/color/20/000000/men-age-group-5.png"><span class="nav-label"> Bookings </span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="/branch-bookingoffe-detail"> Bookings Detail</a></li>
+                    </ul>
+                </li>
                 <li class="nav-heading"><span>Components</span></li>
                 
             </ul>

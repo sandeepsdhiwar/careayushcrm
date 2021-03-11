@@ -239,13 +239,16 @@ Route::post('/manager_update_emp_login/{token}','LoginController@update');
 
 /*************Branch Customer Detail */
 Route::get('/branch-customer-detail', function () {
-    return view('cce.customer.customer_detail');
+    return view('cce.customer.customer_detail');//customer in cce =details
 });
 Route::get('/branch-customer-byme', function () {
-    return view('cce.customer.customer_detailbyme');
+    return view('cce.customer.customer_detailbyme');//customer by me cce details
 });
 Route::get('/branch-bookings-detail', function () {
-    return view('cce.booking.bookings_detail');
+    return view('cce.booking.bookings_detail');     //booking- cce- details
+});
+Route::get('/branch-bookingoffe-detail', function () {
+    return view('offe.booking.bookings_detail');  //booking- offe- details
 });
 
 Route::get('/jqajax/getCreateFormBranchCustomer',function(){
