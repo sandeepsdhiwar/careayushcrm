@@ -108,7 +108,7 @@ if(Session::get('role_name')!="offe")
                                                             </td> --}}
                                                             <td>{{$alled->is_active}}</td>
                                                             <td><button class="btn btn-info btn-sm" onclick="getEditFormBranchEmployee({{$alled->id}})"><i class="fa fa-pencil"></i></button>
-                                                                <button class="btn btn-danger btn-sm" onclick="getDeleteBranchEmployee({{$alled->id}})"><i class="fa fa-trash"></i></button>    
+                                                                {{-- <button class="btn btn-danger btn-sm" onclick="getDeleteBranchEmployee({{$alled->id}})"><i class="fa fa-trash"></i></button>     --}}
                                                             </td>
                                                         </tr>
                                                         <?php

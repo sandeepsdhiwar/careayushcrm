@@ -14,29 +14,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('index'); //landing page
 });
-/****Login */
+/******************************************Login ****************************/
 Route::get('/admin', function () {
-    return view('admin.index');
+    return view('admin.index'); //admin login
 });
 
 Route::get('/manager', function () {
-    return view('manager.index');
+    return view('manager.index'); //manager login
 });
 
 Route::get('/cce', function () {
-    return view('cce.index');
+    return view('cce.index');//cce login
 });
 Route::get('/offe', function () {
-    return view('offe.index');
+    return view('offe.index');//offe login
 });
 
-Route::post('/getLogin/{token}', 'LoginController@authenticate');
+Route::post('/getLogin/{token}', 'LoginController@authenticate'); //ALL LOGIN CONTROLLER
 
-Route::get('/logout/{id}','LoginController@logout');
+Route::get('/logout/{id}','LoginController@logout');//LOGOUT CONTROLLER
 
-/********Dashboard */
+/******************************Dashboard *************************************/
 Route::get('/admin-dashboard', function () {
     return view('admin.dashboard.index');
 });
@@ -52,20 +52,20 @@ Route::get('/cce-dashboard', function () {
 Route::get('/offe-dashboard', function () {
     return view('offe.dashboard.index');
 });
-/***********Branch Detail */
+/***********************Branch Detail *********************************************/
 Route::get('/branch', function () {
     return view('admin.branch.index');
 });
 Route::get('/jqajax/getCreateFormBranch', function () {
-    return view('admin.branch.jqajax.getCreateFormBranch');
+    return view('admin.branch.jqajax.getCreateFormBranch');//branch Create ajax
 });
 Route::get('/jqajax/getEditFormBranch', function () {
-    return view('admin.branch.jqajax.getEditFormBranch');
+    return view('admin.branch.jqajax.getEditFormBranch');//branch Edit ajax
 });
 Route::post('/create_branch/{token}', 'BranchController@store');
 Route::post('/update_branch/{id}/{token}', 'BranchController@update');
 Route::get('/branch/getDeleteBranch/{id}', 'BranchController@delete');
-/*****designation Detail */
+/*******************designation Detail ************************************************/
 Route::get('/designation', function () {
     return view('admin.designation.index');
 });
@@ -262,6 +262,9 @@ Route::post('/update_branch_customer/{token}','CustomerController@updateBranchCu
 
 Route::get('/view-customer-history/{id}',function($id){
     return view('cce.customer.customer_history',['id'=>$id]);
+});
+Route::get('/view-customer-history-offe/{id}',function($id){
+    return view('offe.customer.customer_history',['id'=>$id]);
 });
 
 /***************Patient****************/

@@ -80,7 +80,7 @@ if(!Session::get('role_name')=="offe")
                                                     <td>{{$allcd->cust_contact}}</td>
                                                     <td>{{$allcd->cust_email}}</td>
                                                     <td>{{$allcd->cust_address}}<br>{{$allcd->cust_location}}</td>
-                                                    <th><a href="/view-customer-history/{{$allcd->id}}"><i class="fa fa-eye"></i> view</a></th>
+                                                    <th><a href="/view-customer-history-offe/{{$allcd->id}}"><i class="fa fa-eye"></i> view</a></th>
                                                     <td><button class="btn btn-info btn-sm" onclick="getEditFormBranchCustomer({{$allcd->id}})"><i class="fa fa-pencil"></i></button>
                                                         <!-- <button class="btn btn-danger btn-sm" onclick="getDeleteBranchCustomer({{$allcd->id}})"><i class="fa fa-trash"></i></button> -->    
                                                     </td>
